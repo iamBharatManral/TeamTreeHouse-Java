@@ -2,16 +2,18 @@ public class Explore {
   public static void main(String[] args) {
     String[] friends = { "Ben", "Alena", "Pasan" };
 
-    // Enhanced for loop
-    for (String friend : friends) {
-      System.out.printf("Hey %s! The movie starts at 7, C U there! \n", friend);
-    }
-    System.out.println("\n");
+    int[][] scoreCards = {
+      {1,2,3,4,5,2,3,2,5,7,8,1,2,3,4,4,3,3},
+      {1,2,4,6,7,2,1,8,4,3,2,6,7,3,1,1,3,3},
+      {1,4,5,6,7,2,1,4,4,6,7,3,3,2,25,6,7,8}
+    };
 
-    // Unenhanced for loop
     for (int i = 0; i < friends.length; ++i) {
-      String friend = friends[i];
-      System.out.printf("Hola %s, Please be there in time, maybe 10-15 mins before. Thanks\n", friend);
+      System.out.printf("%s %n----------------%n", friends[i]);
+      for (int j = 0; j < scoreCards[i].length; ++j) {
+        System.out.printf("Hole #%d: %d %n", j + 1, scoreCards[i][j]);
+      }
+      System.out.println();
     }
   }
 }
